@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".main_menu">
+
+    <ImageView
+        android:id="@+id/main_bg_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:clickable="true"
+        android:contentDescription="@string/logo_gif"
+        android:visibility="visible"
+        app:srcCompat="@drawable/main_screen"
+        android:focusable="true"
+        android:onClick="quacking"/>
+
+    <ImageButton
+        android:id="@+id/main_play_button"
+        android:layout_width="173dp"
+        android:layout_height="161dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:background="@null"
+        android:contentDescription="@string/play_button"
+        android:onClick="go2level_screen"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:srcCompat="@drawable/main_screen_play_button"
+        tools:ignore="OnClick" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="59dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/music_toggle_button"
+        android:textOff="@null"
+        android:textOn="@null"
+        android:onClick="onToggleClicked"/>
+
+
+</RelativeLayout>

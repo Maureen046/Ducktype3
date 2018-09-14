@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".level_4">
+
+    <TextView
+        android:id="@+id/level4-def"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/forms"
+        android:fontFamily="@font/mostly_mono"
+        android:text="@string/forms"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="80sp"
+        tools:text="@string/forms" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:background="@null"
+        android:contentDescription="@string/begin"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/begin_button" />
+</LinearLayout>

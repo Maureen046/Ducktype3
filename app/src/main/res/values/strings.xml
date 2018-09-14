@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">!Ducktype</string>
+
+    <string name="play_button">play</string>
+    <string name="logo_gif">logo gif</string>
+    <string name="levelchoose"> levelchoose</string>
+
+    <string name="title_activity_level_screen">level_screen</string>
+    <string name="title_activity_level1">level1</string>
+
+    <string name="levels">LEVELS</string>
+    <string name="lvl1">Level 1</string>
+    <string name="lvl2">Level 2</string>
+    <string name="lvl3">Level 3</string>
+    <string name="lvl4">Level 4</string>
+    <string name="lvl5">Level 5</string>
+
+    <string name="begin">begin!</string>
+
+    <string name="basics">BASICS</string>
+    <string name="formatting">FORMATTING</string>
+    <string name="tables">TABLES</string>
+    <string name="forms">FORMS</string>
+    <string name="css">CSS</string>
+</resources>

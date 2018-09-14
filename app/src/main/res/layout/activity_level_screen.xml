@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".main_menu">
+
+
+    <TextView
+        android:id="@+id/leveltextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mostly_mono"
+        android:text="@string/levels"
+        android:textColor="@color/colorText"
+        android:textSize="60sp"/>
+
+    <ImageButton
+        android:id="@+id/btnlvl1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:contentDescription="@string/lvl1"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/level1_button"
+        android:onClick="go2level1"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/btnlvl2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/level2_button"
+        android:onClick="go2level2"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/btnlvl3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/level3_button"
+        android:onClick="go2level3"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/btnlvl4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/level4_button"
+        android:onClick="go2level4"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/btnlvl5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/level5_button"
+        android:onClick="go2level5"
+        tools:ignore="OnClick" />
+
+</LinearLayout>
