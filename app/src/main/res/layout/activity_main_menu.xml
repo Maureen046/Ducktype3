@@ -19,7 +19,7 @@
         android:visibility="visible"
         app:srcCompat="@drawable/main_screen"
         android:focusable="true"
-        android:onClick="quacking"/>
+        android:onClick="playSound"/>
 
     <ImageButton
         android:id="@+id/main_play_button"
@@ -36,18 +36,16 @@
         app:srcCompat="@drawable/main_screen_play_button"
         tools:ignore="OnClick" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton2"
-        android:layout_width="59dp"
-        android:layout_height="48dp"
+    <ImageButton
+        android:id="@+id/settingsBTN"
+        android:layout_width="91dp"
+        android:layout_height="56dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="11dp"
-        android:layout_marginTop="13dp"
-        android:background="@drawable/music_toggle_button"
-        android:textOff="@null"
-        android:textOn="@null"
-        android:onClick="onToggleClicked"/>
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/settings" />
 
 
 </RelativeLayout>

@@ -5,6 +5,12 @@
     <color name="colorAccent">#fe6464</color>
     <color name="colorBackground">#fff7d0</color>
     <color name="colorText">#302107</color>
+    <color name="colorBackgroundDark">#d58000</color>
+    <color name="level1">#fff7d0</color>
+    <color name="level2">#fde77a</color>
+    <color name="level3">#ffc57a</color>
+    <color name="level4">#ff9c7a</color>
+    <color name="level5">#ff837a</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

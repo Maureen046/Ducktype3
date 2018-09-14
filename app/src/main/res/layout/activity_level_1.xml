@@ -33,5 +33,7 @@
         android:background="@null"
         android:contentDescription="@string/begin"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/begin_button" />
+        app:srcCompat="@drawable/begin_button"
+        android:onClick="go2level1quiz"
+        tools:ignore="OnClick" />
 </LinearLayout>

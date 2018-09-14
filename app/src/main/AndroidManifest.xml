@@ -25,22 +25,42 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/FullscreenTheme">
-        </activity>
+            android:theme="@style/FullscreenTheme" />
 
         <service android:name=".bgmusic_service" />
 
-        <activity android:name=".level_1" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
-        <activity android:name=".level_2" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
-        <activity android:name=".level_3" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
-        <activity android:name=".level_4" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
-        <activity android:name=".level_5" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
-        <activity android:name=".splashScreen" android:screenOrientation="portrait" android:theme="@style/AppTheme.Splash">
+        <activity
+            android:name=".level_1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".level_2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".level_3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".level_4"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".level_5"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".splashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".settings" />
+        <activity android:name=".level_1_quiz"></activity>
     </application>
+
 </manifest>
