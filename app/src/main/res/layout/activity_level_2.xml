@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorBackground"
+    android:background="@color/level2"
     android:gravity="center"
     tools:context=".level_2">
 
@@ -13,13 +13,21 @@
         android:id="@+id/level2-def"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/formatting"
         android:fontFamily="@font/mostly_mono"
-        android:text="@string/formatting"
+        android:text="@string/medium"
         android:textAlignment="center"
         android:textColor="@color/colorText"
-        android:textSize="65sp"
-        tools:text="@string/formatting" />
+        android:textSize="65sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mostly_mono"
+        android:text="Tables and Forms"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
 
     <Space
         android:layout_width="match_parent"

@@ -66,7 +66,12 @@ public class level_1 extends AppCompatActivity {
             case R.id.imageButton:
                 shorttapSound = soundPool.play(shorttapSound, 1,1,0,0,1);
         }
-
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        soundPool.release();
+        soundPool = null;
     }
 
     public void go2level1quiz(View view) {

@@ -1,7 +1,9 @@
 package com.example.truel.ducktype3;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -13,16 +15,19 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 public class level_screen extends AppCompatActivity {
     private SoundPool soundPool;
     private int shorttapSound;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         removeTitleBar();
         setContentView(R.layout.activity_level_screen);
+
 
         ImageButton lvl1 = (ImageButton) findViewById(R.id.btnlvl1);
         lvl1.setOnClickListener(new View.OnClickListener() {
@@ -37,8 +42,18 @@ public class level_screen extends AppCompatActivity {
         lvl2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                go2level2();
-                playSound(v);
+                SharedPreferences pref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                boolean unlocked = pref.getBoolean("unlock_lvl2", false);
+                if(unlocked)
+                {
+                    go2level2();
+                    playSound(v);
+                }
+                else{
+                    playSound(v);
+                    Toast.makeText(getApplicationContext(), "Level is locked. Finish level 1 first", Toast.LENGTH_SHORT).show();}
+
+
             }
         });
 
@@ -46,26 +61,19 @@ public class level_screen extends AppCompatActivity {
         lvl3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                go2level3();
-                playSound(v);
-            }
-        });
+                SharedPreferences pref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                boolean unlocked = pref.getBoolean("unlock_lvl3", false);
+                if(unlocked)
+                {
 
-        ImageButton lvl4 = (ImageButton) findViewById(R.id.btnlvl4);
-        lvl4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                go2level4();
-                playSound(v);
-            }
-        });
+                    go2level3();
+                    playSound(v);
+                }
+                else{
+                    playSound(v);
+                    Toast.makeText(getApplicationContext(), "Level is locked. Finish level 2 first", Toast.LENGTH_SHORT).show();}
 
-        ImageButton lvl5 = (ImageButton) findViewById(R.id.btnlvl5);
-        lvl5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                go2level5();
-                playSound(v);
+
             }
         });
 
@@ -97,8 +105,9 @@ public class level_screen extends AppCompatActivity {
     }
 
     public void playSound(View view) {
-        soundPool.play(shorttapSound,1,1,0,0,1);
+        soundPool.play(shorttapSound, 1, 1, 0, 0, 1);
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -107,6 +116,7 @@ public class level_screen extends AppCompatActivity {
     }
 
     public void go2level1() {
+
         Intent a = new Intent(this, level_1.class);
         startActivity(a);
     }
@@ -121,13 +131,8 @@ public class level_screen extends AppCompatActivity {
         startActivity(a);
     }
 
-    public void go2level4() {
-        Intent a = new Intent(this, level_4.class);
-        startActivity(a);
-    }
-
-    public void go2level5() {
-        Intent a = new Intent(this, level_5.class);
-        startActivity(a);
+    @Override
+    public void onBackPressed(){
+        startActivity(new Intent(this, main_menu.class));
     }
 }

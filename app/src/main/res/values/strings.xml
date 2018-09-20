@@ -18,9 +18,13 @@
 
     <string name="begin">begin!</string>
 
-    <string name="basics">BASICS</string>
-    <string name="formatting">FORMATTING</string>
-    <string name="tables">TABLES</string>
-    <string name="forms">FORMS</string>
-    <string name="css">CSS</string>
+    <string name="easy">EASY</string>
+    <string name="medium">MEDIUM</string>
+    <string name="hard">HARD</string>
+
+    <string name="question">What is the meaning of HTML?</string>
+    <string name="cleared">LEVEL CLEARED</string>
+    <string name="failed">LEVEL FAILED</string>
+
+
 </resources>

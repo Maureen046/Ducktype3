@@ -31,22 +31,17 @@
 
         <activity
             android:name=".level_1"
+            android:parentActivityName=".level_screen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".level_2"
+            android:parentActivityName=".level_screen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".level_3"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".level_4"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".level_5"
+            android:parentActivityName=".level_screen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
@@ -59,8 +54,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".settings" />
-        <activity android:name=".level_1_quiz"></activity>
+        <activity
+            android:name=".level_1_quiz"
+            android:finishOnTaskLaunch="true"
+            android:parentActivityName=".level_screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".level_2_quiz"
+            android:parentActivityName=".level_screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".level_3_quiz"
+            android:parentActivityName=".level_screen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".levelCleared" />
+        <activity android:name=".levelFailed"></activity>
     </application>
 
 </manifest>

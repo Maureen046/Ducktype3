@@ -13,14 +13,22 @@
         android:id="@+id/level1-def"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/basics"
         android:fontFamily="@font/mostly_mono"
-        android:text="@string/basics"
+        android:text="@string/easy"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="80sp"
-        android:visibility="visible"
-        tools:text="@string/basics" />
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mostly_mono"
+        android:text="Basics and Formatting"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="24sp" />
 
     <Space
         android:layout_width="match_parent"

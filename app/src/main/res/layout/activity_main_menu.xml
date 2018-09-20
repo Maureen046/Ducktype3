@@ -15,6 +15,7 @@
         android:layout_alignParentTop="true"
         android:background="@null"
         android:clickable="true"
+        android:focusableInTouchMode="true"
         android:contentDescription="@string/logo_gif"
         android:visibility="visible"
         app:srcCompat="@drawable/main_screen"
