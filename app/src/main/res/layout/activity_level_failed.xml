@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Failed_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fail"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".levelCleared"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexa_rust_slab"
+        android:text="@string/failed"
+        android:textAlignment="center"
+        android:textColor="@color/level1"
+        android:textSize="70sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="227dp"
+        android:background="@null"
+        app:srcCompat="@drawable/roasted_duck"
+        android:paddingTop="30dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="66dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mostly_mono"
+        android:text="Tap anywhere to go back to level selection screen"
+        android:textAlignment="center"
+        android:textColor="@color/level5"
+        android:textSize="24sp" />
+</LinearLayout>

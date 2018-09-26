@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".level_1_quiz"
+    android:background="@color/level5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/levelTitle"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:paddingTop="10dp"
+            android:text="@string/hard"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <android.support.v4.view.NonSwipeableViewPager
+        android:id="@+id/lvl3Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+    </android.support.v4.view.NonSwipeableViewPager>
+
+</LinearLayout>
