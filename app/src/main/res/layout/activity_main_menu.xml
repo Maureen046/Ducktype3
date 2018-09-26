@@ -37,16 +37,5 @@
         app:srcCompat="@drawable/main_screen_play_button"
         tools:ignore="OnClick" />
 
-    <ImageButton
-        android:id="@+id/settingsBTN"
-        android:layout_width="91dp"
-        android:layout_height="56dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="12dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/settings" />
-
 
 </RelativeLayout>

@@ -17,6 +17,8 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.Random;
+
 
 public class level_screen extends AppCompatActivity {
     private SoundPool soundPool;
@@ -52,6 +54,8 @@ public class level_screen extends AppCompatActivity {
                 else{
                     playSound(v);
                     Toast.makeText(getApplicationContext(), "Level is locked. Finish level 1 first", Toast.LENGTH_SHORT).show();}
+
+
 
 
             }

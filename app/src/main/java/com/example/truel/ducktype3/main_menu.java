@@ -7,16 +7,19 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 
 
 public class main_menu extends AppCompatActivity {
+    boolean doubleBackToExitPressedOnce = false;
     private SoundPool soundPool;
     private int tapSound, quackSound;
 
@@ -64,9 +67,6 @@ public class main_menu extends AppCompatActivity {
                 soundPool.play(tapSound, 1, 1, 0, 0, 1);
                 break;
 
-            case R.id.settingsBTN:
-                soundPool.play(tapSound, 1, 1, 0, 0, 1);
-                break;
             case R.id.main_bg_pic:
 
                 soundPool.play(quackSound, 1, 1, 0, 0, 1);
@@ -94,6 +94,26 @@ public class main_menu extends AppCompatActivity {
     public void go2level_screen() {
         Intent i = new Intent(this, level_screen.class);
         startActivity(i);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please press BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+
     }
 }
 
