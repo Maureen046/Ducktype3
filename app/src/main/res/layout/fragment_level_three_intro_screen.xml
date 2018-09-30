@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/level5"
+    tools:context=".Level3.LevelThreeIntroScreenFragment"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:text="@string/hard"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="80sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:text="CSS"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <ImageButton
+            android:id="@+id/LevelThreeBeginButton"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:background="@null"
+            android:contentDescription="@string/begin"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/begin_button" />
+    </LinearLayout>
+</FrameLayout>

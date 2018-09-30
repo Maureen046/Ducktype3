@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Level1.LevelOneContainer"
+    android:background="@color/level1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/levelTitle"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:paddingTop="10dp"
+            android:text="@string/easy"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="242dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="false"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/LevelOneQuestionText"
+                android:layout_width="match_parent"
+                android:layout_height="282dp"
+                android:layout_gravity="top"
+                android:fontFamily="@font/mostly_mono"
+                android:paddingLeft="10dp"
+                android:paddingTop="50dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="30sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/lvl1Frag1_choice1"
+            android:layout_width="150dp"
+            android:layout_height="79dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="41dp"
+            android:layout_marginBottom="149dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/choices_button_pressed" />
+
+        <ImageButton
+            android:id="@+id/lvl1Frag1_choice2"
+            android:layout_width="150dp"
+            android:layout_height="79dp"
+            android:layout_alignTop="@+id/lvl1Frag1_choice1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="31dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/choices_button_pressed" />
+
+        <ImageButton
+            android:id="@+id/lvl1Frag1_choice3"
+            android:layout_width="150dp"
+            android:layout_height="79dp"
+            android:layout_alignStart="@+id/lvl1Frag1_choice1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="41dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/choices_button_pressed" />
+
+        <ImageButton
+            android:id="@+id/lvl1Frag1_choice4"
+            android:layout_width="150dp"
+            android:layout_height="79dp"
+            android:layout_alignStart="@+id/lvl1Frag1_choice2"
+            android:layout_alignTop="@+id/lvl1Frag1_choice3"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/choices_button_pressed" />
+
+        <TextView
+            android:id="@+id/LevelOneFirstChoiceText"
+            android:layout_width="127dp"
+            android:layout_height="43dp"
+            android:layout_alignTop="@+id/lvl1Frag1_choice1"
+            android:layout_alignEnd="@+id/lvl1Frag1_choice1"
+            android:layout_alignBottom="@+id/lvl1Frag1_choice1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/mostly_mono"
+            android:text=""
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/LevelOneSecondChoiceText"
+            android:layout_width="128dp"
+            android:layout_height="45dp"
+            android:layout_alignStart="@+id/lvl1Frag1_choice2"
+            android:layout_alignTop="@+id/lvl1Frag1_choice2"
+            android:layout_alignEnd="@+id/lvl1Frag1_choice2"
+            android:layout_alignBottom="@+id/lvl1Frag1_choice2"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/mostly_mono"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/LevelOneThirdChoiceText"
+            android:layout_width="126dp"
+            android:layout_height="42dp"
+            android:layout_alignStart="@+id/lvl1Frag1_choice3"
+            android:layout_alignTop="@+id/lvl1Frag1_choice3"
+            android:layout_alignEnd="@+id/lvl1Frag1_choice3"
+            android:layout_alignBottom="@+id/lvl1Frag1_choice3"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/mostly_mono"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/LevelOneLastChoiceText"
+            android:layout_width="127dp"
+            android:layout_height="42dp"
+            android:layout_alignStart="@+id/lvl1Frag1_choice4"
+            android:layout_alignTop="@+id/lvl1Frag1_choice4"
+            android:layout_alignEnd="@+id/lvl1Frag1_choice4"
+            android:layout_alignBottom="@+id/lvl1Frag1_choice4"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="17dp"
+            android:fontFamily="@font/mostly_mono"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

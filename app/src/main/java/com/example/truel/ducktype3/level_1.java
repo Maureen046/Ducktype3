@@ -12,6 +12,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
+import com.example.truel.ducktype3.Level1.LevelOneContainer;
+
 public class level_1 extends AppCompatActivity {
     private SoundPool soundPool;
     private int tapSound, shorttapSound;
@@ -75,7 +77,7 @@ public class level_1 extends AppCompatActivity {
     }
 
     public void go2level1quiz(View view) {
-        Intent moveforward = new Intent(this, level_1_quiz.class);
+        Intent moveforward = new Intent(this, LevelOneContainer.class);
         startActivity(moveforward);
     }
 }

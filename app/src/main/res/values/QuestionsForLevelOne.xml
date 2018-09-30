@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="QuestionsForLevelOne">
+        <item> This tag identifies the subject or purpose of the page.</item>
+        <item>All HTML documents must start with this document type declaration.</item>
+        <item>This tag is used when comprising the body where you put the contents of the documents such as links, text, headings, and images.</item>
+        <item>This tag is used when ending an HTML website.</item>
+        <item>This is the text that makes up the main content of a web page.</item>
+        <item>What does HTML stand for?</item>
+        <item>It refers to creating linked and nonlinear structures of information.</item>
+        <item>It refers to the words on the computer screen that we are marking up.</item>
+        <item>It is the process of preparing the text to define how it displays when viewed as pages by marking them with tags.</item>
+        <item>It is a system of signs used for communication, whether written or oral and is important when using HTML.</item>
+        <item>This tag is used to continue to the next line of paragraph.</item>
+        <item>This tag is used to insert headings in the web page.</item>
+        <item>This tag is used to insert paragraphs in the web page.</item>
+        <item>This tag is used to insert links in the web page.</item>
+        <item>This tag is used to insert a button in the web page.</item>
+        <item>This tag makes the text appear in bold typeface.</item>
+        <item>This tag makes the text appear italicized.</item>
+        <item>This tag makes the text appear with an underline beneath the text.</item>
+        <item>Who invented the HTML language?</item>
+        <item>On what year was the HTML language released?</item>
+        <item>This tag is used to make an unordered list.</item>
+        <item>This tag is used to list words or items.</item>
+        <item>This tag sets the list item marker to a circle.</item>
+        <item>This tag sets the list item marker to a square.</item>
+        <item>This tag sets the list to not be marked.</item>
+        <item>This tag sets the list item marker to a bullet.</item>
+        <item>This tag is used when inserting images to the web page.</item>
+        <item>This tag provides an alternate text for an image if the user for some reason cannot view it because of slow connection, an error in the source attribute, or if the user uses a screen reader.</item>
+        <item>This tag is used when inserting a table of items or texts.</item>
+        <item>This tag is used for table headers.</item>
+
+    </string-array>
+</resources>

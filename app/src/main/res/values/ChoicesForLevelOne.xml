@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Question1">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question2">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question3">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question4">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question5">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question6">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question7">
+        <item>Hyper</item>
+        <item>Text</item>
+        <item>Table</item>
+        <item>Paragraph</item>
+    </string-array>
+    <string-array name="Question8">
+        <item>Language</item>
+        <item>Text</item>
+        <item>Words</item>
+        <item>Tags</item>
+    </string-array>
+    <string-array name="Question9">
+        <item>Tags</item>
+        <item>Html</item>
+        <item>Body</item>
+        <item>Markup</item>
+    </string-array>
+    <string-array name="Question10">
+        <item>Text</item>
+        <item>Body</item>
+        <item>Markup</item>
+        <item>Language</item>
+    </string-array>
+    <string-array name="Question11">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question12">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question13">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question14">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question15">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question16">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question17">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question18">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question19">
+        <item>Tim Berners-Lee</item>
+        <item>Blaise Paschal</item>
+        <item>James Gosling</item>
+        <item>Gabe Newell</item>
+    </string-array>
+    <string-array name="Question20">
+        <item>1990</item>
+        <item>1991</item>
+        <item>1995</item>
+        <item>2000</item>
+    </string-array>
+    <string-array name="Question21">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question22">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question23">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question24">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question25">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question26">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question27">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question28">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question29">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="Question30">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+</resources>

@@ -7,7 +7,7 @@
     android:background="@color/colorBackground"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".main_menu">
+    tools:context=".MainMenuActivity">
 
 
     <TextView

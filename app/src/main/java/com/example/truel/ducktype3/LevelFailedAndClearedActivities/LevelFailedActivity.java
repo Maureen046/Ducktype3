@@ -1,4 +1,4 @@
-package com.example.truel.ducktype3;
+package com.example.truel.ducktype3.LevelFailedAndClearedActivities;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -9,7 +9,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-public class levelFailed extends AppCompatActivity {
+import com.example.truel.ducktype3.BackgroundMusicService;
+import com.example.truel.ducktype3.R;
+import com.example.truel.ducktype3.level_screen;
+
+public class LevelFailedActivity extends AppCompatActivity {
     private MediaPlayer failplay, failsound;
 
 
@@ -19,10 +23,10 @@ public class levelFailed extends AppCompatActivity {
         removeTitleBar();
         setContentView(R.layout.activity_level_failed);
 
-        Intent svc = new Intent (this, bgmusic_service.class);
+        Intent svc = new Intent (this, BackgroundMusicService.class);
         stopService(svc);
 
-       //Intent fire =  new Intent(this, bgmusic_fail.class);
+       //Intent fire =  new Intent(this, BackgroundMusicFail.class);
        //startService(fire);
 
         failplay = MediaPlayer.create(this, R.raw.fire_background);
@@ -78,7 +82,7 @@ public class levelFailed extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
-        Intent firestop = new Intent(this, bgmusic_service.class);
+        Intent firestop = new Intent(this, BackgroundMusicService.class);
         startService(firestop);
 
         failplay.stop();

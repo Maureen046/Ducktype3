@@ -11,7 +11,7 @@
     android:focusableInTouchMode="true"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".levelCleared">
+    tools:context=".LevelFailedAndClearedActivities.LevelClearedActivity">
 
 
     <TextView

@@ -7,21 +7,25 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.Toast;
+
+import com.example.truel.ducktype3.Helper.General;
 
 
-
-public class main_menu extends AppCompatActivity {
-    boolean doubleBackToExitPressedOnce = false;
+public class MainMenuActivity extends AppCompatActivity {
     private SoundPool soundPool;
-    private int tapSound, quackSound;
+    private int tapSound, quackSound, shorttapsound;
+    FragmentManager fragmentManager= getSupportFragmentManager();
+    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +34,7 @@ public class main_menu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
 
-        Intent svc = new Intent(this, bgmusic_service.class);
+        Intent svc = new Intent(this, BackgroundMusicService.class);
         startService(svc);
 
 
@@ -45,8 +49,9 @@ public class main_menu extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+
+                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                     .build();
 
             soundPool = new SoundPool.Builder()
@@ -59,6 +64,7 @@ public class main_menu extends AppCompatActivity {
 
         tapSound = soundPool.load(this, R.raw.tap_sound, 1);
         quackSound = soundPool.load(this, R.raw.quack, 1);
+        shorttapsound = soundPool.load(this, R.raw.short_tap_sound, 1);
     }
 
     public void playSound(View view) {
@@ -71,17 +77,10 @@ public class main_menu extends AppCompatActivity {
 
                 soundPool.play(quackSound, 1, 1, 0, 0, 1);
                 break;
+
+            //case R.id.
         }
     }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        soundPool.release();
-        soundPool = null;
-    }
-
 
     protected void removeTitleBar() {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -92,29 +91,18 @@ public class main_menu extends AppCompatActivity {
     }
 
     public void go2level_screen() {
-        Intent i = new Intent(this, level_screen.class);
-        startActivity(i);
+        General.add(MainMenuActivity.this, new LevelScreenFragment(), LevelScreenFragment.TAG);
+
     }
+
 
     @Override
-    public void onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please press BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce=false;
-            }
-        }, 2000);
-
+    protected void onDestroy() {
+        super.onDestroy();
+        soundPool.release();
+        soundPool = null;
     }
+
 }
 
 

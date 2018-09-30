@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:clickable="true"
+    tools:context=".LevelScreenFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/leveltextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:text="@string/levels"
+            android:textColor="@color/colorText"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:text="@string/instructions"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"/>
+
+        <ImageButton
+            android:id="@+id/btnlvl1"
+            android:layout_width="195dp"
+            android:layout_height="100dp"
+            android:adjustViewBounds="false"
+            android:background="@null"
+            android:contentDescription="@string/lvl1"
+            android:cropToPadding="false"
+            android:hapticFeedbackEnabled="false"
+            android:onClick="go2level1"
+            android:scaleType="fitCenter"
+            android:soundEffectsEnabled="false"
+            app:srcCompat="@drawable/level1_button"
+            tools:ignore="OnClick" />
+
+        <ImageButton
+            android:id="@+id/btnlvl2"
+            android:layout_width="195dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:onClick="go2level2"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/level2_button"
+            tools:ignore="OnClick" />
+
+        <ImageButton
+            android:id="@+id/btnlvl3"
+            android:layout_width="195dp"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:onClick="go2level3"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/level3_button"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+</FrameLayout>

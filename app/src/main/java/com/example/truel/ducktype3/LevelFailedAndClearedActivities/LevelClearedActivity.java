@@ -1,4 +1,4 @@
-package com.example.truel.ducktype3;
+package com.example.truel.ducktype3.LevelFailedAndClearedActivities;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -9,7 +9,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-public class levelCleared extends AppCompatActivity {
+import com.example.truel.ducktype3.R;
+import com.example.truel.ducktype3.level_screen;
+
+public class LevelClearedActivity extends AppCompatActivity {
     private MediaPlayer clearedsound;
 
     @Override

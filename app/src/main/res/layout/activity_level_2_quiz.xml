@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".level_1_quiz"
+    tools:context=".Level1.LevelOneContainer"
     android:background="@color/level2">
 
     <LinearLayout
@@ -25,13 +25,5 @@
             android:textColor="@color/colorText"
             android:textSize="30sp" />
     </LinearLayout>
-
-    <android.support.v4.view.NonSwipeableViewPager
-        android:id="@+id/lvl2Container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible">
-
-    </android.support.v4.view.NonSwipeableViewPager>
 
 </LinearLayout>

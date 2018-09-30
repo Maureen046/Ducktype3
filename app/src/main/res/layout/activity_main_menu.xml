@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".main_menu">
+    tools:context=".MainMenuActivity">
 
     <ImageView
         android:id="@+id/main_bg_pic"
@@ -36,6 +36,17 @@
         android:visibility="visible"
         app:srcCompat="@drawable/main_screen_play_button"
         tools:ignore="OnClick" />
+
+    <FrameLayout
+        android:id="@+id/landing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:visibility="visible">
+
+    </FrameLayout>
 
 
 </RelativeLayout>

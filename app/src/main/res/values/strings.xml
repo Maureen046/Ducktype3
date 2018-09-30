@@ -19,13 +19,17 @@
     <string name="begin">begin!</string>
 
     <string name="easy">EASY</string>
-    <string name="medium">MEDIUM</string>
+    <string name="medium">NORMAL</string>
     <string name="hard">HARD</string>
 
 
     <string name="cleared">LEVEL CLEARED</string>
     <string name="failed">LEVEL FAILED</string>
 
+
+    <string name="instructions">Answer TEN questions correctly each level to move on to the next level !</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
