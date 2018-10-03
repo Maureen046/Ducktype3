@@ -12,6 +12,7 @@
     <color name="level4">#ff9c7a</color>
     <color name="level5">#ff837a</color>
     <color name="fail">#de0a0a</color>
+    <color name="white">#ffff</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

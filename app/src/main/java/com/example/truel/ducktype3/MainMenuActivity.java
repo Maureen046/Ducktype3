@@ -96,8 +96,28 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
 
+//    @Override
+//    public void onPause() {
+//        super.onPause();
+//        BackgroundMusicService musicService = new BackgroundMusicService();
+//        musicService.Pause();
+//    }
+//
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//        BackgroundMusicService musicService = new BackgroundMusicService();
+//        musicService.Pause();
+//    }
+//
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        BackgroundMusicService musicService = new BackgroundMusicService();
+//        musicService.Resume();
+//    }
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         super.onDestroy();
         soundPool.release();
         soundPool = null;

@@ -42,8 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/mostly_mono"
-        android:text="Tap anywhere to go back to level selection screen"
+        android:text="Aw, it's no biggie. Go give it another try. Tap anywhere to go back to the main menu"
         android:textAlignment="center"
         android:textColor="@color/level5"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
 </LinearLayout>

@@ -26,11 +26,12 @@ public class General {
 
     }
 
-    public static void add (AppCompatActivity activity, Fragment fragment, String tag) {
+    public static void add(AppCompatActivity activity, Fragment fragment, String tag) {
         if (activity != null) {
             FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
             transaction.add(R.id.landing, fragment, tag).addToBackStack(null).commitAllowingStateLoss();
         }
 
     }
+
 }

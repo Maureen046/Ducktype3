@@ -31,5 +31,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="directions">Answer TEN questions correctly and you move onto the next level.
+        Answer ONE question wrong and you will have to start the level over. Think over your answers carefully. There is no timer :D</string>
+
+    <string name="FinalLevelDirections">This is the final level. You made it this far! You already know the drill: TEN correct answers and you win, but ONE
+    wrong answer and you start the level over. GOOD LUCK :D</string>
+
 
 </resources>

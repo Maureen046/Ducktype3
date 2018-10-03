@@ -31,15 +31,10 @@
         <service android:name=".BackgroundMusicService" />
 
         <activity
-            android:name=".level_1"
-            android:parentActivityName=".level_screen"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".SplashScreenActivity"
+            android:noHistory="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Splash"
-            android:noHistory="true">
+            android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,22 +42,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Level1.LevelOneContainer"
+            android:name=".Level1.LevelOneContainerActivity"
             android:finishOnTaskLaunch="true"
-            android:parentActivityName=".level_screen"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".level_2_quiz"
-            android:parentActivityName=".level_screen"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".level_3_quiz"
             android:parentActivityName=".level_screen"
             android:screenOrientation="portrait" />
         <activity android:name=".LevelFailedAndClearedActivities.LevelClearedActivity" />
         <activity android:name=".LevelFailedAndClearedActivities.LevelFailedActivity" />
-        <activity android:name=".Level2.LevelTwoContainer" />
-        <activity android:name=".Level3.LevelThreeContainer"></activity>
+        <activity android:name=".Level2.LevelTwoContainerActivity" />
+        <activity android:name=".Level3.LevelThreeContainerActivity"></activity>
     </application>
 
 </manifest>

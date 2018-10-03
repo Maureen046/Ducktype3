@@ -46,7 +46,7 @@
             android:cropToPadding="false"
             android:hapticFeedbackEnabled="false"
             android:onClick="go2level1"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             android:soundEffectsEnabled="false"
             app:srcCompat="@drawable/level1_button"
             tools:ignore="OnClick" />
@@ -57,7 +57,7 @@
             android:layout_height="100dp"
             android:background="@null"
             android:onClick="go2level2"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/level2_button"
             tools:ignore="OnClick" />
 
@@ -67,7 +67,7 @@
             android:layout_height="100dp"
             android:background="@null"
             android:onClick="go2level3"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/level3_button"
             tools:ignore="OnClick" />
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/level5"
+    android:background="@color/level4"
     tools:context=".Level3.LevelThreeIntroScreenFragment"
     android:clickable="true">
 
@@ -40,11 +40,24 @@
 
         <ImageButton
             android:id="@+id/LevelThreeBeginButton"
-            android:layout_width="match_parent"
-            android:layout_height="114dp"
+            android:layout_width="188dp"
+            android:layout_height="100dp"
             android:background="@null"
             android:contentDescription="@string/begin"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/begin_button" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:paddingLeft="20dp"
+            android:paddingTop="30dp"
+            android:paddingRight="20dp"
+            android:text="@string/FinalLevelDirections"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 </FrameLayout>

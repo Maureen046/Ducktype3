@@ -6,16 +6,11 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.example.truel.ducktype3.Helper.General;
-import com.example.truel.ducktype3.LevelScreenFragment;
-import com.example.truel.ducktype3.MainMenuActivity;
 import com.example.truel.ducktype3.R;
 
 
@@ -47,7 +42,7 @@ public class LevelOneIntroScreenFragment extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent LevelOneIntent = new Intent(getActivity(), LevelOneContainer.class);
+                Intent LevelOneIntent = new Intent(getActivity(), LevelOneContainerActivity.class);
                 startActivity(LevelOneIntent);
             }
         });

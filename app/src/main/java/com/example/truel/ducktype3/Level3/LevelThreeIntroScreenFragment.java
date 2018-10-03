@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.example.truel.ducktype3.Level2.LevelTwoContainer;
+import com.example.truel.ducktype3.Level2.LevelTwoContainerActivity;
 import com.example.truel.ducktype3.R;
 
 
@@ -36,6 +36,15 @@ public class LevelThreeIntroScreenFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ImageButton button3 = (ImageButton) view.findViewById(R.id.LevelThreeBeginButton);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent LevelThreeIntent = new Intent(getActivity(), LevelThreeContainerActivity.class);
+                startActivity(LevelThreeIntent);
+
+            }
+        });
 
     }
 

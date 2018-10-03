@@ -2,15 +2,13 @@ package com.example.truel.ducktype3.Level1;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.truel.ducktype3.MainMenuActivity;
@@ -24,9 +22,13 @@ import static com.example.truel.ducktype3.R.id.LevelOneFirstChoiceText;
 import static com.example.truel.ducktype3.R.id.LevelOneLastChoiceText;
 import static com.example.truel.ducktype3.R.id.LevelOneSecondChoiceText;
 import static com.example.truel.ducktype3.R.id.LevelOneThirdChoiceText;
+import static com.example.truel.ducktype3.R.id.lvl1Frag1_choice1;
+import static com.example.truel.ducktype3.R.id.lvl1Frag1_choice2;
+import static com.example.truel.ducktype3.R.id.lvl1Frag1_choice3;
+import static com.example.truel.ducktype3.R.id.lvl1Frag1_choice4;
 
 
-public class LevelOneContainer extends AppCompatActivity {
+public class LevelOneContainerActivity extends AppCompatActivity {
     private String[] choices7;
     private String[] choices8;
     private String[] choices9;
@@ -38,6 +40,10 @@ public class LevelOneContainer extends AppCompatActivity {
     private TextView SecondChoice;
     private TextView ThirdChoice;
     private TextView LastChoice;
+    private ImageButton FirstChoiceButton;
+    private ImageButton SecondChoiceButton;
+    private ImageButton ThirdChoiceButton;
+    private ImageButton LastChoiceButton;
 
 //    SharedPreferences prefs = getApplicationContext().getSharedPreferences(
 //            "MyPrefs", Context.MODE_PRIVATE);
@@ -81,11 +87,17 @@ public class LevelOneContainer extends AppCompatActivity {
         SecondChoice = (TextView) findViewById(LevelOneSecondChoiceText);
         ThirdChoice = (TextView) findViewById(LevelOneThirdChoiceText);
         LastChoice = (TextView) findViewById(LevelOneLastChoiceText);
+
+        FirstChoiceButton = (ImageButton) findViewById(lvl1Frag1_choice1);
+        SecondChoiceButton = (ImageButton) findViewById(lvl1Frag1_choice2);
+        ThirdChoiceButton = (ImageButton) findViewById(lvl1Frag1_choice3);
+        LastChoiceButton = (ImageButton) findViewById(lvl1Frag1_choice4);
+
         setRandomQuestion();
     }
 
     private void setRandomQuestion() {
-        int randomIndex = new Random().nextInt(questions.length + 1);
+        int randomIndex = new Random().nextInt(questions.length);
         String randomName;
 
         if (randomIndex < 1) {
@@ -93,60 +105,73 @@ public class LevelOneContainer extends AppCompatActivity {
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<Body>"));
-            SecondChoice.setText(Html.fromHtml("<Title>"));
-            ThirdChoice.setText(Html.fromHtml("<!DOCTYPE html>"));
-            LastChoice.setText(Html.fromHtml("Web Browser"));
+            FirstChoice.setText("<Body>");
+            SecondChoice.setText("<Title>");
+            ThirdChoice.setText("<!DOCTYPE html>");
+            LastChoice.setText("Web Browser");
+
+            SecondChoicePress(null);
+
 
         } else if (randomIndex < 2) {
             randomName = questions[1];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<Html>"));
-            SecondChoice.setText(Html.fromHtml("<Title>"));
-            ThirdChoice.setText(Html.fromHtml("<HTML! doctype>"));
-            LastChoice.setText(Html.fromHtml("<!DOCTYPE html>"));
+            FirstChoice.setText("<Html>");
+            SecondChoice.setText("<Title>");
+            ThirdChoice.setText("<HTML! doctype>");
+            LastChoice.setText("<!DOCTYPE html>");
+
+            LastChoicePress(null);
 
         } else if (randomIndex < 3) {
             randomName = questions[2];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<html>"));
-            SecondChoice.setText(Html.fromHtml("<Body>"));
-            ThirdChoice.setText(Html.fromHtml("<Title>"));
-            LastChoice.setText(Html.fromHtml("<!DOCTYPE html>"));
+            FirstChoice.setText("<html>");
+            SecondChoice.setText("<Body>");
+            ThirdChoice.setText("<Title>");
+            LastChoice.setText("<!DOCTYPE html>");
+
+            SecondChoicePress(null);
 
         } else if (randomIndex < 4) {
             randomName = questions[3];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<html>"));
-            SecondChoice.setText(Html.fromHtml("</html>"));
-            ThirdChoice.setText(Html.fromHtml("<end>"));
-            LastChoice.setText(Html.fromHtml("</end>"));
+            FirstChoice.setText("<html>");
+            SecondChoice.setText("</html>");
+            ThirdChoice.setText("<end>");
+            LastChoice.setText("</end>");
+
+            SecondChoicePress(null);
 
         } else if (randomIndex < 5) {
             randomName = questions[4];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("Text"));
-            SecondChoice.setText(Html.fromHtml("Normal Text"));
-            ThirdChoice.setText(Html.fromHtml("Ordinary Text"));
-            LastChoice.setText(Html.fromHtml("HTML Text"));
+            FirstChoice.setText("Text");
+            SecondChoice.setText("Normal Text");
+            ThirdChoice.setText("Ordinary Text");
+            LastChoice.setText("HTML Text");
+
+            SecondChoicePress(null);
 
         } else if (randomIndex < 6) {
             randomName = questions[5];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("Hypertext Markup Language"));
-            SecondChoice.setText(Html.fromHtml("Hypertext Mechanical Language"));
-            ThirdChoice.setText(Html.fromHtml("Hypertext Markup Luggage"));
-            LastChoice.setText(Html.fromHtml("Hypertext Marking Language"));
+            FirstChoice.setText("Hypertext Markup Language");
+            SecondChoice.setText("Hypertext Mechanical Language");
+            ThirdChoice.setText("Hypertext Markup Luggage");
+            LastChoice.setText("Hypertext Marking Language");
+
+            FirstChoicePress(null);
 
         } else if (randomIndex < 7) {
             randomName = questions[6];
@@ -158,6 +183,8 @@ public class LevelOneContainer extends AppCompatActivity {
             ThirdChoice.setText(choices7[2]);
             LastChoice.setText(choices7[3]);
 
+            FirstChoicePress(null);
+
         } else if (randomIndex < 8) {
             randomName = questions[7];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
@@ -167,6 +194,8 @@ public class LevelOneContainer extends AppCompatActivity {
             SecondChoice.setText(choices8[1]);
             ThirdChoice.setText(choices8[2]);
             LastChoice.setText(choices8[3]);
+
+            SecondChoicePress(null);
 
         } else if (randomIndex < 9) {
             randomName = questions[8];
@@ -178,6 +207,8 @@ public class LevelOneContainer extends AppCompatActivity {
             ThirdChoice.setText(choices9[2]);
             LastChoice.setText(choices9[3]);
 
+            LastChoicePress(null);
+
         } else if (randomIndex < 10) {
             randomName = questions[9];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
@@ -188,85 +219,103 @@ public class LevelOneContainer extends AppCompatActivity {
             ThirdChoice.setText(choices10[2]);
             LastChoice.setText(choices10[3]);
 
+            LastChoicePress(null);
+
         } else if (randomIndex < 11) {
             randomName = questions[10];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<b/>"));
-            SecondChoice.setText(Html.fromHtml("</>"));
-            ThirdChoice.setText(Html.fromHtml("<space>"));
-            LastChoice.setText(Html.fromHtml("<br>"));
+            FirstChoice.setText("<b/>");
+            SecondChoice.setText("</>");
+            ThirdChoice.setText("<space>");
+            LastChoice.setText("<br>");
+
+            LastChoicePress(null);
 
         } else if (randomIndex < 12) {
             randomName = questions[11];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<h1>"));
-            SecondChoice.setText(Html.fromHtml("<h>"));
-            ThirdChoice.setText(Html.fromHtml("<ho>"));
-            LastChoice.setText(Html.fromHtml("<heading1>"));
+            FirstChoice.setText("<h1>");
+            SecondChoice.setText("<h>");
+            ThirdChoice.setText("<ho>");
+            LastChoice.setText("<heading1>");
+
+            FirstChoicePress(null);
 
         } else if (randomIndex < 13) {
             randomName = questions[12];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<pr>"));
-            SecondChoice.setText(Html.fromHtml("<p>"));
-            ThirdChoice.setText(Html.fromHtml("<paragraph>"));
-            LastChoice.setText(Html.fromHtml("<pg>"));
+            FirstChoice.setText("<pr>");
+            SecondChoice.setText("<p>");
+            ThirdChoice.setText("<paragraph>");
+            LastChoice.setText("<pg>");
+
+            SecondChoicePress(null);
 
         } else if (randomIndex < 14) {
             randomName = questions[13];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<a=  >"));
-            SecondChoice.setText(Html.fromHtml("<href=   >"));
-            ThirdChoice.setText(Html.fromHtml("<ahref=   >"));
-            LastChoice.setText(Html.fromHtml("<a href=  >"));
+            FirstChoice.setText("<a=  >");
+            SecondChoice.setText("<href=   >");
+            ThirdChoice.setText("<ahref=   >");
+            LastChoice.setText("<a href=  >");
+
+            LastChoicePress(null);
 
         } else if (randomIndex < 15) {
             randomName = questions[14];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<b>"));
-            SecondChoice.setText(Html.fromHtml("<bt>"));
-            ThirdChoice.setText(Html.fromHtml("<button>"));
-            LastChoice.setText(Html.fromHtml("<bn>"));
+            FirstChoice.setText("<b>");
+            SecondChoice.setText("<bt>");
+            ThirdChoice.setText("<button>");
+            LastChoice.setText("<bn>");
+
+            ThirdChoicePress(null);
 
         } else if (randomIndex < 16) {
             randomName = questions[15];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<bold>"));
-            SecondChoice.setText(Html.fromHtml("<bo>"));
-            ThirdChoice.setText(Html.fromHtml("<b>"));
-            LastChoice.setText(Html.fromHtml("<o>"));
+            FirstChoice.setText("<bold>");
+            SecondChoice.setText("<bo>");
+            ThirdChoice.setText("<b>");
+            LastChoice.setText("<o>");
+
+            ThirdChoicePress(null);
 
         } else if (randomIndex < 17) {
             randomName = questions[16];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<i>"));
-            SecondChoice.setText(Html.fromHtml("<italic>"));
-            ThirdChoice.setText(Html.fromHtml("<it>"));
-            LastChoice.setText(Html.fromHtml("<il>"));
+            FirstChoice.setText("<i>");
+            SecondChoice.setText("<italic>");
+            ThirdChoice.setText("<it>");
+            LastChoice.setText("<il>");
+
+            FirstChoicePress(null);
 
         } else if (randomIndex < 18) {
             randomName = questions[17];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<underline>"));
-            SecondChoice.setText(Html.fromHtml("<line>"));
-            ThirdChoice.setText(Html.fromHtml("<u>"));
-            LastChoice.setText(Html.fromHtml("<_>"));
+            FirstChoice.setText("<underline>");
+            SecondChoice.setText("<line>");
+            ThirdChoice.setText("<u>");
+            LastChoice.setText("<_>");
+
+            ThirdChoicePress(null);
 
         } else if (randomIndex < 19) {
             randomName = questions[18];
@@ -278,6 +327,9 @@ public class LevelOneContainer extends AppCompatActivity {
             ThirdChoice.setText(choices19[2]);
             LastChoice.setText(choices19[3]);
 
+            FirstChoicePress(null);
+
+
         } else if (randomIndex < 20) {
             randomName = questions[19];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
@@ -288,109 +340,127 @@ public class LevelOneContainer extends AppCompatActivity {
             ThirdChoice.setText(choices20[2]);
             LastChoice.setText(choices20[3]);
 
+            FirstChoicePress(null);
+
         } else if (randomIndex < 21) {
             randomName = questions[20];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<list>"));
-            SecondChoice.setText(Html.fromHtml("<l>"));
-            ThirdChoice.setText(Html.fromHtml("<li>"));
-            LastChoice.setText(Html.fromHtml("<lt>"));
+            FirstChoice.setText("<list>");
+            SecondChoice.setText("<l>");
+            ThirdChoice.setText("<li>");
+            LastChoice.setText("<lt>");
+
+            ThirdChoicePress(null);
 
         } else if (randomIndex < 22) {
             randomName = questions[21];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<ul>"));
-            SecondChoice.setText(Html.fromHtml("<unordered>"));
-            ThirdChoice.setText(Html.fromHtml("<ud>"));
-            LastChoice.setText(Html.fromHtml("<un>"));
+            FirstChoice.setText("<ul>");
+            SecondChoice.setText("<unordered>");
+            ThirdChoice.setText("<ud>");
+            LastChoice.setText("<un>");
+
+            FirstChoicePress(null);
 
         } else if (randomIndex < 23) {
             randomName = questions[22];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<ul style = “list-style-type:default”>"));
-            SecondChoice.setText(Html.fromHtml("<ul style = “list-style-type:disc”>"));
-            ThirdChoice.setText(Html.fromHtml("<ul style = “list-style-type:circle”>"));
-            LastChoice.setText(Html.fromHtml("<ul style = “list-style-type:round”>"));
+            FirstChoice.setText("<ul style = “list-style-type:default”>");
+            SecondChoice.setText("<ul style = “list-style-type:disc”>");
+            ThirdChoice.setText("<ul style = “list-style-type:circle”>");
+            LastChoice.setText("<ul style = “list-style-type:round”>");
+
+            ThirdChoicePress(null);
 
         } else if (randomIndex < 24) {
             randomName = questions[23];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<ul style = “list-style-type:box”>"));
-            SecondChoice.setText(Html.fromHtml("<ul style = “list-style-type:square”>"));
-            ThirdChoice.setText(Html.fromHtml("<ul style = “list-style-type:rectangle”>"));
-            LastChoice.setText(Html.fromHtml("<ul style = “list-style-type:default”>"));
+            FirstChoice.setText("<ul style = “list-style-type:box”>");
+            SecondChoice.setText("<ul style = “list-style-type:square”>");
+            ThirdChoice.setText("<ul style = “list-style-type:rectangle”>");
+            LastChoice.setText("<ul style = “list-style-type:default”>");
 
+            SecondChoicePress(null);
 
         } else if (randomIndex < 25) {
             randomName = questions[24];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<ul style = “list-style-type:none”>"));
-            SecondChoice.setText(Html.fromHtml("<ul style = “list-style-type:”>"));
-            ThirdChoice.setText(Html.fromHtml("<ul style = “list-style-type:blank”>"));
-            LastChoice.setText(Html.fromHtml("<ul style = “list-style-type:empty”>"));
+            FirstChoice.setText("<ul style = “list-style-type:none”>");
+            SecondChoice.setText("<ul style = “list-style-type:”>");
+            ThirdChoice.setText("<ul style = “list-style-type:blank”>");
+            LastChoice.setText("<ul style = “list-style-type:empty”>");
 
+            FirstChoicePress(null);
 
         } else if (randomIndex < 26) {
             randomName = questions[25];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<ul style = “list-style-type:disk”>"));
-            SecondChoice.setText(Html.fromHtml("<ul style = “list-style-type:bullet”>"));
-            ThirdChoice.setText(Html.fromHtml("<ul style = “list-style-type:circle”>"));
-            LastChoice.setText(Html.fromHtml("<ul style = “list-style-type:round”>"));
+            FirstChoice.setText("<ul style = “list-style-type:disk”>");
+            SecondChoice.setText("<ul style = “list-style-type:bullet”>");
+            ThirdChoice.setText("<ul style = “list-style-type:circle”>");
+            LastChoice.setText("<ul style = “list-style-type:round”>");
 
+            FirstChoicePress(null);
 
         } else if (randomIndex < 27) {
             randomName = questions[26];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<img=\"XXXX.jpg\">"));
-            SecondChoice.setText(Html.fromHtml("<img src=\"XXXX.jpg\">"));
-            ThirdChoice.setText(Html.fromHtml("<img src \"XXXX.jpg\">"));
-            LastChoice.setText(Html.fromHtml("<imgsrc=\"XXXX.jpg\">"));
+            FirstChoice.setText("<img=\"XXXX.jpg\">");
+            SecondChoice.setText("<img src=\"XXXX.jpg\">");
+            ThirdChoice.setText("<img src \"XXXX.jpg\">");
+            LastChoice.setText("<imgsrc=\"XXXX.jpg\">");
 
+            SecondChoicePress(null);
 
         } else if (randomIndex < 28) {
             randomName = questions[27];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<alter>"));
-            SecondChoice.setText(Html.fromHtml("<a>"));
-            ThirdChoice.setText(Html.fromHtml("<alternative>"));
-            LastChoice.setText(Html.fromHtml("<alt>"));
+            FirstChoice.setText("<alter>");
+            SecondChoice.setText("<a>");
+            ThirdChoice.setText("<alternative>");
+            LastChoice.setText("<alt>");
+
+            LastChoicePress(null);
 
         } else if (randomIndex < 29) {
             randomName = questions[28];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<t>"));
-            SecondChoice.setText(Html.fromHtml("<tb>"));
-            ThirdChoice.setText(Html.fromHtml("<table>"));
-            LastChoice.setText(Html.fromHtml("<td>"));
+            FirstChoice.setText("<t>");
+            SecondChoice.setText("<tb>");
+            ThirdChoice.setText("<table>");
+            LastChoice.setText("<td>");
+
+            ThirdChoicePress(null);
 
         } else if (randomIndex < 30) {
             randomName = questions[29];
             TextView place = (TextView) findViewById(R.id.LevelOneQuestionText);
             place.setText(randomName);
 
-            FirstChoice.setText(Html.fromHtml("<th>"));
-            SecondChoice.setText(Html.fromHtml("<tr>"));
-            ThirdChoice.setText(Html.fromHtml("<tb>"));
-            LastChoice.setText(Html.fromHtml("<T>"));
+            FirstChoice.setText("<th>");
+            SecondChoice.setText("<tr>");
+            ThirdChoice.setText("<tb>");
+            LastChoice.setText("<T>");
+
+            FirstChoicePress(null);
         }
     }
 
@@ -415,8 +485,8 @@ public class LevelOneContainer extends AppCompatActivity {
         backpress.setNegativeButton("Quit", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                finish();
                 GoToMainScreen();
+                finish();
             }
         });
         backpress.setPositiveButton("Resume", new DialogInterface.OnClickListener() {
@@ -428,23 +498,133 @@ public class LevelOneContainer extends AppCompatActivity {
         backpress.show();
     }
 
-    private void choices() {
-
-    }
-
     public void clearedlevel(View view) {
         Intent a = new Intent(this, LevelClearedActivity.class);
         startActivity(a);
     }
 
+
     public void failedLevel(View view) {
         Intent b = new Intent(this, LevelFailedActivity.class);
         startActivity(b);
+        finish();
     }
 
 
     protected void GoToMainScreen() {
         Intent c = new Intent(this, MainMenuActivity.class);
         startActivity(c);
+    }
+
+    protected void FirstChoicePress(View view) {
+        FirstChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO add score system
+                setRandomQuestion();
+            }
+        });
+        SecondChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        ThirdChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        LastChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+    }
+
+    protected void SecondChoicePress(View view) {
+        FirstChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        SecondChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO add score system
+                setRandomQuestion();
+            }
+        });
+        ThirdChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        LastChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+    }
+
+    protected void ThirdChoicePress(View view) {
+        FirstChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        SecondChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        ThirdChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO add score system
+                setRandomQuestion();
+            }
+        });
+        LastChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+    }
+
+    protected void LastChoicePress(View view) {
+        FirstChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        SecondChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        LastChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                failedLevel(v);
+            }
+        });
+        LastChoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO add score system
+                setRandomQuestion();
+            }
+        });
     }
 }

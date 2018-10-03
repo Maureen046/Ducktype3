@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.example.truel.ducktype3.BackgroundMusicService;
+import com.example.truel.ducktype3.MainMenuActivity;
 import com.example.truel.ducktype3.R;
 import com.example.truel.ducktype3.level_screen;
 
@@ -23,11 +24,11 @@ public class LevelFailedActivity extends AppCompatActivity {
         removeTitleBar();
         setContentView(R.layout.activity_level_failed);
 
-        Intent svc = new Intent (this, BackgroundMusicService.class);
+        Intent svc = new Intent(this, BackgroundMusicService.class);
         stopService(svc);
 
-       //Intent fire =  new Intent(this, BackgroundMusicFail.class);
-       //startService(fire);
+        //Intent fire =  new Intent(this, BackgroundMusicFail.class);
+        //startService(fire);
 
         failplay = MediaPlayer.create(this, R.raw.fire_background);
         failplay.setLooping(true);
@@ -36,33 +37,19 @@ public class LevelFailedActivity extends AppCompatActivity {
 
         failsound = MediaPlayer.create(this, R.raw.fail_sound);
         failsound.setLooping(false);
-        failsound.setVolume(100,100);
+        failsound.setVolume(100, 100);
         failsound.start();
 
-        LinearLayout linearLayout =  (LinearLayout) findViewById(R.id.Failed_Layout);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.Failed_Layout);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 move2level(v);
             }
         });
-
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            AudioAttributes audioAttributes = new AudioAttributes.Builder()
-//                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-//                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-//                    .build();
-//
-//            soundPool = new SoundPool.Builder()
-//                    .setMaxStreams(1)
-//                    .setAudioAttributes(audioAttributes)
-//                    .build();
-//        } else {
-//            soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-//        }
-//
-//        failSound = soundPool.load(this, R.raw.fail_sound, 1);
     }
+
+
 
 
     protected void removeTitleBar() {
@@ -74,7 +61,7 @@ public class LevelFailedActivity extends AppCompatActivity {
     }
 
     private void move2level(View view) {
-        Intent a = new Intent(this, level_screen.class);
+        Intent a = new Intent(this, MainMenuActivity.class);
         startActivity(a);
         finish();
     }
@@ -89,6 +76,13 @@ public class LevelFailedActivity extends AppCompatActivity {
         failplay.release();
 
         failsound.stop();
+        failsound.release();
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        failplay.release();
         failsound.release();
     }
 

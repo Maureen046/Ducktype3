@@ -4,21 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Level1.LevelOneContainer"
+    tools:context=".Level1.LevelOneContainerActivity"
     android:background="@color/level1">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/levelTitle"
+            android:id="@+id/level1Title"
             android:layout_width="272dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mostly_mono"
-            android:paddingTop="10dp"
+            android:paddingTop="30dp"
             android:text="@string/easy"
             android:textAlignment="center"
             android:textColor="@color/colorText"
@@ -66,10 +66,10 @@
             android:layout_height="79dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="41dp"
+            android:layout_marginStart="24dp"
             android:layout_marginBottom="149dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             android:src="@drawable/choices_button_pressed" />
 
         <ImageButton
@@ -79,9 +79,9 @@
             android:layout_alignTop="@+id/lvl1Frag1_choice1"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="31dp"
+            android:layout_marginEnd="23dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             android:src="@drawable/choices_button_pressed" />
 
         <ImageButton
@@ -93,7 +93,7 @@
             android:layout_marginStart="0dp"
             android:layout_marginBottom="41dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             android:src="@drawable/choices_button_pressed" />
 
         <ImageButton
@@ -105,78 +105,78 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
             android:background="@null"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             android:src="@drawable/choices_button_pressed" />
 
         <TextView
             android:id="@+id/LevelOneFirstChoiceText"
-            android:layout_width="127dp"
-            android:layout_height="43dp"
+            android:layout_width="130dp"
+            android:layout_height="41dp"
             android:layout_alignTop="@+id/lvl1Frag1_choice1"
             android:layout_alignEnd="@+id/lvl1Frag1_choice1"
             android:layout_alignBottom="@+id/lvl1Frag1_choice1"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
             android:fontFamily="@font/mostly_mono"
             android:text=""
             android:textAlignment="center"
-            android:layout_centerHorizontal="true"
             android:textColor="@color/colorText" />
 
         <TextView
             android:id="@+id/LevelOneSecondChoiceText"
-            android:layout_width="128dp"
-            android:layout_height="45dp"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
             android:layout_alignStart="@+id/lvl1Frag1_choice2"
             android:layout_alignTop="@+id/lvl1Frag1_choice2"
             android:layout_alignEnd="@+id/lvl1Frag1_choice2"
             android:layout_alignBottom="@+id/lvl1Frag1_choice2"
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="27dp"
             android:layout_marginEnd="11dp"
-            android:layout_marginBottom="18dp"
+            android:layout_marginBottom="12dp"
             android:fontFamily="@font/mostly_mono"
             android:text=""
             android:textAlignment="center"
-            android:textColor="@color/colorText"
-            android:layout_centerHorizontal="true"/>
+            android:textColor="@color/colorText" />
 
         <TextView
             android:id="@+id/LevelOneThirdChoiceText"
-            android:layout_width="126dp"
-            android:layout_height="42dp"
+            android:layout_width="129dp"
+            android:layout_height="46dp"
             android:layout_alignStart="@+id/lvl1Frag1_choice3"
             android:layout_alignTop="@+id/lvl1Frag1_choice3"
             android:layout_alignEnd="@+id/lvl1Frag1_choice3"
             android:layout_alignBottom="@+id/lvl1Frag1_choice3"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="11dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="9dp"
             android:fontFamily="@font/mostly_mono"
             android:text=""
             android:textAlignment="center"
-            android:textColor="@color/colorText"
-            android:layout_centerHorizontal="true"/>
+            android:textColor="@color/colorText" />
 
         <TextView
             android:id="@+id/LevelOneLastChoiceText"
-            android:layout_width="127dp"
-            android:layout_height="42dp"
+            android:layout_width="126dp"
+            android:layout_height="49dp"
             android:layout_alignStart="@+id/lvl1Frag1_choice4"
             android:layout_alignTop="@+id/lvl1Frag1_choice4"
             android:layout_alignEnd="@+id/lvl1Frag1_choice4"
             android:layout_alignBottom="@+id/lvl1Frag1_choice4"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="11dp"
-            android:layout_marginBottom="17dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="6dp"
             android:fontFamily="@font/mostly_mono"
             android:text=""
             android:textAlignment="center"
-            android:textColor="@color/colorText"
-            android:layout_centerHorizontal="true"/>
+            android:textColor="@color/colorText" />
 
 
     </RelativeLayout>

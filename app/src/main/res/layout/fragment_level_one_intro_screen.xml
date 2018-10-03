@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:clickable="true"
+    android:focusable="true"
     tools:context=".Level1.LevelOneIntroScreenFragment">
 
     <LinearLayout
@@ -41,12 +42,25 @@
 
         <ImageButton
             android:id="@+id/LevelOneBeginButton"
-            android:layout_width="match_parent"
-            android:layout_height="114dp"
+            android:layout_width="188dp"
+            android:layout_height="100dp"
             android:background="@null"
             android:contentDescription="@string/begin"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/begin_button"
             tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mostly_mono"
+            android:paddingLeft="20dp"
+            android:paddingTop="30dp"
+            android:paddingRight="20dp"
+            android:text="@string/directions"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
     </LinearLayout>
 </FrameLayout>

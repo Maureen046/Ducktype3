@@ -32,15 +32,17 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="39dp" />
+        android:layout_height="29dp" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/mostly_mono"
-        android:text="Tap anywhere to go back to level selection screen"
+        android:text="That was AWESOME! You can now play the next level. Tap anywhere to go back to the main menu"
         android:textAlignment="center"
         android:textColor="@color/colorBackgroundDark"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"/>
 </LinearLayout>
