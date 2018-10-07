@@ -1,7 +1,10 @@
 package com.example.truel.ducktype3.Level1;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,6 +48,8 @@ public class LevelOneContainerActivity extends AppCompatActivity {
     private ImageButton ThirdChoiceButton;
     private ImageButton LastChoiceButton;
 
+    private MediaPlayer mediaPlayer;
+
 //    SharedPreferences prefs = getApplicationContext().getSharedPreferences(
 //            "MyPrefs", Context.MODE_PRIVATE);
 
@@ -53,8 +58,10 @@ public class LevelOneContainerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         removeTitleBar();
         setContentView(R.layout.activity_level_one_container);
+        BGMusic();
 
         initUI();
+
 
 
 //
@@ -72,6 +79,23 @@ public class LevelOneContainerActivity extends AppCompatActivity {
 //                finishthis();
 //            }
 //        });
+    }
+    private void BGMusic() {
+        mediaPlayer = new MediaPlayer();
+        Context context = getApplicationContext();
+        mediaPlayer = MediaPlayer.create(context, R.raw.level1_backgroundmusic_pixelville);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.setVolume(100,100);
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+        mediaPlayer.start();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mediaPlayer.stop();
+        mediaPlayer.release();
+        mediaPlayer=null;
     }
 
     private void initUI() {

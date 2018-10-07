@@ -32,15 +32,6 @@ public class BackgroundMusicService extends Service {
         return Service.START_NOT_STICKY;
     }
 
-    public void Pause() {
-        player.pause();
-        player_length = player.getCurrentPosition();
-    }
-
-    public void Resume() {
-        player.seekTo(player_length);
-        player.start();
-    }
 
     @Override
     public void onDestroy() {

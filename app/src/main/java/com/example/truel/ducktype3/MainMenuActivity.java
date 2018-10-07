@@ -23,7 +23,7 @@ import com.example.truel.ducktype3.Helper.General;
 public class MainMenuActivity extends AppCompatActivity {
     private SoundPool soundPool;
     private int tapSound, quackSound, shorttapsound;
-    FragmentManager fragmentManager= getSupportFragmentManager();
+    FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
 
@@ -116,6 +116,22 @@ public class MainMenuActivity extends AppCompatActivity {
 //        BackgroundMusicService musicService = new BackgroundMusicService();
 //        musicService.Resume();
 //    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Intent mPause = new Intent(this, BackgroundMusicService.class);
+        stopService(mPause);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent mResume = new Intent(this, BackgroundMusicService.class);
+        startService(mResume);
+    }
+
+
     @Override
     public void onDestroy() {
         super.onDestroy();
